@@ -1,8 +1,6 @@
 # Run Analysis Codebook
 
-
-
-## What does run_analysis.R script and his runAnalysis() function
+## What does run_analysis.R script and the function runAnalysis()
 
  - Download raw data from an experiements done by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto (Smartlab - Non Linear Complex Systems Laboratory) DITEN - University  degli Studi di Genova, Genoa I-16145, Italy. 
  - Merge test and train data sets to get one big data.frame
