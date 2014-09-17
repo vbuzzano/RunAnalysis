@@ -4,17 +4,17 @@ Getting and Cleaning Data Course Project
 
 The purpose of this project is to demonstrate ability to collect, work with, and clean a data set.
 
-## How to use this script
+## How to use this script step by step
 
- - Clone this repository
- - Run R Studio
- - Once in the R console, set your working dir to project directory
+ 1. Clone this repository
+ 2. Run R Studio
+ 3. Once in the R console, set your working dir to project directory
    - > setwd('/pathToProject/RunAnalysis')
- - This script use 'dplyr' package, so you have to install this package before running.
+ 4. This script use 'dplyr' package, so you have to install this package before running.
    - > install.packages('dplyr')
- - Include the source code into R
+ 5. Include the source code into R
    - > source('run_analysis.R')
- - Run the script
+ 6. Run the script
    - > runAnalysis()
 
 ## What does the function runAnalysis()
