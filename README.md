@@ -8,8 +8,10 @@ The purpose of this project is to demonstrate ability to collect, work with, and
 
  - Clone this repository
  - Run R Studio
- - Set your working dir to project directory
+ - Once in the R console, set your working dir to project directory
    - > setwd('/pathToProject/RunAnalysis')
+ - This script use 'dplyr' package, so you have to install this package before running.
+   - > install.packages('dplyr')
  - Include the source code into R
    - > source('run_analysis.R')
  - Run the script
