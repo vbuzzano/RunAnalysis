@@ -3,9 +3,13 @@
 ## What does run_analysis.R script and the function runAnalysis()
 
  - Download raw data from an experiements done by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto (Smartlab - Non Linear Complex Systems Laboratory) DITEN - University  degli Studi di Genova, Genoa I-16145, Italy. 
+ 
  - Merge test and train data sets to get one big data.frame
+ 
  - Extract variables from the "data.frame" using regex mean\\(|std\\( to keep only variables for measurements on the mean and standard deviation, but not take gravityMean features tBodyAccMean, tBodyAccJerkMean, tBodyGyroMean, tBodyGyroJerkMean because these features are used on the angle() variable.
+ 
  - Tidy the result data set with the average of each variable for each activity and each subject.
+ 
  - Save tidy data  containing average of each variable for each activity and each subject into 'averages.txt' file.
 
 ## File averages.txt
