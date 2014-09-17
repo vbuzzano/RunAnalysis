@@ -15,7 +15,7 @@ library(dplyr)
 ## - Uses descriptive activity names to name the activities in the data set
 ## - Appropriately labels the data set with descriptive variable names. 
 ## - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-runAnalyse <- function() {
+runAnalysis <- function() {
     
     # 0. Download and extract Raw Data
     print("0. Download and extract Raw Data")
@@ -32,7 +32,7 @@ runAnalyse <- function() {
     print("2. Extracts only the measurements on the mean and standard deviation for each measurement.")
     features <- read.csv(fileFeatures, header=FALSE, sep=" ", col.names = c('id', 'feature'))
     featuresToKeep <- grep('mean\\(|std\\(', features[,2])
-    featuresToKeep <- grep('mean\\(\\)$|std\\(\\)$', features[,2])
+#    featuresToKeep <- grep('mean\\(\\)$|std\\(\\)$', features[,2])
     d <- d[, c(1, 2, featuresToKeep + 2)]
     
     # 3. Uses descriptive activity names to name the activities in the data set
@@ -51,8 +51,7 @@ runAnalyse <- function() {
         group_by(subject, activity) %>%
         summarise_each(funs(mean))
 
-    tidyDF
-    write.table(x = tidyDF, file = 'averages.txt', row.name = FALSE)
+    write.table(x = tidyDF, file = avgFilename, row.names = FALSE)
 }
 
 # This function read data sets files for 'test' or 'train' and create a 
@@ -103,3 +102,4 @@ dataZipFile        <- "dataset.zip"
 dataZipDir         <- 'UCI HAR Dataset'
 fileActivityLabels <- paste(dataDir, dataZipDir,"activity_labels.txt", sep = "/")
 fileFeatures       <- paste(dataDir, dataZipDir,"features.txt", sep = "/")
+avgFilename        <- 'averages.txt'
