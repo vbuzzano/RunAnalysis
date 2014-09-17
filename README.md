@@ -42,5 +42,9 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 This script (run_analysis.R) will first download a zip file including raw data sets, then it creates a new tidy data set named [averages.txt](https://s3.amazonaws.com/coursera-uploads/user-051fa137730c3eb33da98f95/972585/asst-3/c33837803e7311e4936bedd6353e4722.txt) which contains averages for mean() and std() variables by subject and activity.
 
+You can view this script within R Studio with the following commands:
+ - data <- read.table(file_to_averages.txt, header = TRUE)
+ - View(data)
+
 ## Codebook
 For more informations about variables/features included into 'average.txt', please look at the [codebook](https://github.com/vbuzzano/RunAnalysis/blob/master/codebook.md)
